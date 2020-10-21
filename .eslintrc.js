@@ -1,0 +1,45 @@
+module.exports = {
+  root: true,
+  extends: '@react-native-community',
+  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  rules: {
+    'max-statements': ['error', 24],
+    'no-console': 'off',
+    'comma-dangle': 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-return-assign': 'off',
+    'no-unused-vars': 'error',
+    'no-empty': 'error',
+    'array-bracket-spacing': ['error', 'never'],
+    'object-curly-spacing': ['error', 'always'],
+    'space-before-function-paren': 'off',
+    'no-return-await': 'warn',
+    'object-shorthand': ['error', 'always'],
+    'no-extra-semi': 'off',
+    semi: 'off',
+    'no-prototype-builtins': 'off',
+    'no-void': 'off',
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'all',
+        ignoreReadBeforeAssign: true,
+      },
+    ],
+    'max-len': [
+      'error',
+      140,
+      4,
+      {
+        ignoreUrls: true,
+        ignoreTemplateLiterals: true,
+        ignoreStrings: true,
+      },
+    ],
+  },
+}
