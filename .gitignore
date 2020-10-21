@@ -43,6 +43,7 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
+!shrimpprices.keystore
 !debug.keystore
 
 # fastlane
